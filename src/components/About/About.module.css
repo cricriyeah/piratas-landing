@@ -1,0 +1,91 @@
+.about {
+  padding: 10rem 2rem;
+  background-color: var(--color-primary);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 8rem;
+  align-items: center;
+}
+
+.left {
+  position: relative;
+}
+
+.quote {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-style: italic;
+  color: var(--color-gold);
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+
+.goldLine {
+  width: 80px;
+  height: 1px;
+  background-color: var(--color-gold);
+  position: relative;
+}
+
+.goldLine::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-gold);
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-gold-light);
+  margin-bottom: 1rem;
+}
+
+.text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-text-primary);
+}
+
+.text strong {
+  color: var(--color-gold);
+  font-weight: normal;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .left {
+    text-align: center;
+  }
+  
+  .goldLine {
+    margin: 0 auto;
+  }
+}

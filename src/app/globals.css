@@ -1,34 +1,20 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html {
-  height: 100%;
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --color-primary: #f5f1e6; /* Parchment/Beige background */
+  --color-secondary: #0a0a0a; /* Dark text / deep-black */
+  --color-gold: #c5a059; /* Gold accent */
+  --color-gold-light: #e9c176; /* Tertiary/Gold light */
+  --color-nautical-red: #c5a059; /* Redefinido a dorado */
+  --color-surface: #141313; /* Dark surface */
+  --color-surface-container: #201f1f;
+  --color-surface-container-low: #1c1b1b;
+  --color-surface-container-high: #2b2a2a;
+  --color-text-primary: #0a0a0a;
+  --color-text-muted: #48473f;
+  --font-display: var(--font-eb-garamond), serif;
+  --font-body: var(--font-hanken-grotesk), sans-serif;
+  --font-mono: var(--font-hanken-grotesk), sans-serif; /* Reasignado para consistencia tipográfica */
+  --transition-base: 0.3s ease;
+  --max-width: 1280px;
 }
 
 * {
@@ -37,13 +23,77 @@ body {
   margin: 0;
 }
 
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--color-primary);
+  /* Textura de ruido sutil para un aspecto rústico y robusto */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15); /* Sombra de texto (drop shadow) sutil y elegante */
+}
+
+/* Estilos de sombras y recortes planos y duros */
+.box-shadow-hard {
+  box-shadow: 4px 4px 0px var(--color-secondary);
+}
+
+.text-shadow-hard {
+  text-shadow: 3px 3px 0px var(--color-secondary);
+}
+
+.clip-path-angled {
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
   }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Divisor de secciones náutico estilizado */
+.section-divider {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  height: 1px;
+}
+
+.divider-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(197, 160, 89, 0.4) 15%, rgba(197, 160, 89, 0.4) 85%, transparent);
+  position: relative;
+}
+
+.divider-diamond {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-primary);
+  border: 1.5px solid var(--color-gold);
+  z-index: 2;
 }
