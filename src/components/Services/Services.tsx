@@ -31,6 +31,7 @@ const secondaryService = {
   id: 'pesca-deportiva',
   nameEs: 'Pesca Deportiva',
   image: '/pescadeportiva.webp',
+  badge: 'Todo el año',
   description: 'Atrapa las especies más codiciadas del Pacífico con equipo de primer nivel y guías locales expertos. Una experiencia de adrenalina pura en aguas privilegiadas.',
   whatsappMsg: 'Hola! Me interesa reservar una expedición de Pesca Deportiva.',
 };
