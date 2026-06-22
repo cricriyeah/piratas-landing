@@ -17,14 +17,14 @@ export default function Hero() {
 
       <div className={styles.content}>
         <h1 className={styles.title} data-aos="fade-up" data-aos-delay="200">
-          Descubre el <br /> <span className={styles.highlight}>Mar de Cortés</span>
+          Safari Marino<br /> <span className={styles.highlight}>&amp; Avistamiento de Ballenas</span>
         </h1>
         <p className={styles.subtitle} data-aos="fade-up" data-aos-delay="400">
-          Explora paisajes inolvidables y vive encuentros cercanos con la vida marina en Puerto Chale, Baja California Sur.
+          Las mejores expediciones de Bahía Almejas y Bahía Magdalena. Comunícate por WhatsApp y reserva tu aventura en Puerto Chale, Baja California Sur.
         </p>
         <div className={styles.actions} data-aos="fade-up" data-aos-delay="600">
-          <a href="#services" className={styles.primaryBtn}>
-            Reserva Ahora
+          <a href="https://wa.me/526121234567" target="_blank" rel="noopener noreferrer" className={styles.primaryBtn}>
+            Reserva por WhatsApp
           </a>
           <a href="#gallery" className={styles.secondaryBtn}>
             Ver Galería

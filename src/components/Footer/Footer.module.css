@@ -108,14 +108,59 @@
 }
 
 @media (max-width: 768px) {
+  .footer {
+    padding: 4rem 1.5rem 3rem;
+    overflow: hidden;
+  }
+  .grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    text-align: center;
+  }
   .brand {
-    grid-column: span 12;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .tagline {
+    text-align: center;
+    max-width: 100%;
+  }
+  .logoImage {
+    max-height: 68px;
+    width: auto;
   }
   .linksGrid {
-    grid-column: span 12;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    text-align: center;
+  }
+  .linkColumn {
+    align-items: center;
+    text-align: center;
+  }
+  .columnTitle {
+    text-align: center;
+  }
+  .link {
+    text-align: center;
   }
   .copyrightArea {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .copyright {
+    text-align: center;
+    font-size: 0.65rem;
+  }
+  .legalLinks {
+    justify-content: center;
   }
 }

@@ -12,15 +12,20 @@
   --color-text-muted: #48473f;
   --font-display: var(--font-eb-garamond), serif;
   --font-body: var(--font-hanken-grotesk), sans-serif;
-  --font-mono: var(--font-hanken-grotesk), sans-serif; /* Reasignado para consistencia tipográfica */
+  --font-mono: var(--font-hanken-grotesk), sans-serif;
   --transition-base: 0.3s ease;
-  --max-width: 1280px;
+  --max-width: 1100px; /* Reduced from 1280px to tighten the layout */
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+/* Zoom-out effect: scale everything down at the root */
+html {
+  font-size: 13px; /* 1rem = 13px instead of 16px — all rem-based sizes shrink proportionally */
 }
 
 html,
@@ -43,7 +48,7 @@ a {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
   font-weight: 700;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15); /* Sombra de texto (drop shadow) sutil y elegante */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
 }
 
 /* Estilos de sombras y recortes planos y duros */

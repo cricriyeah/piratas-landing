@@ -15,7 +15,7 @@ export default function Footer() {
               height={70} 
               className={styles.logoImage}
             />
-            <p className={styles.tagline}>Explorando los rincones más hermosos del Mar de Cortés con guías locales.</p>
+            <p className={styles.tagline}>Explorando los rincones más hermosos de Bahía Magdalena con guías locales.</p>
           </div>
 
           {/* Links */}

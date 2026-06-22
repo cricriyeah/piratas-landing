@@ -181,3 +181,19 @@
     background-color: var(--color-text-primary) !important;
   }
 }
+
+@media (max-width: 640px) {
+  .navbar {
+    padding: 0.75rem 1rem;
+  }
+  .navbar.scrolled {
+    padding: 0.5rem 1rem;
+  }
+  .logo {
+    margin-left: 0;
+  }
+  .logoImage {
+    max-height: 68px;
+    width: auto;
+  }
+}

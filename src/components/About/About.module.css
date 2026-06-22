@@ -1,5 +1,5 @@
 .about {
-  padding: 10rem 2rem;
+  padding: 14rem 2rem;
   background-color: var(--color-primary);
 }
 
@@ -85,7 +85,15 @@
     text-align: center;
   }
   
+  .quote {
+    font-size: 1.8rem;
+  }
+  
   .goldLine {
     margin: 0 auto;
+  }
+
+  .right {
+    text-align: center;
   }
 }

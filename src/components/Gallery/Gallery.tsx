@@ -1,64 +1,59 @@
+import Image from 'next/image';
 import styles from './Gallery.module.css';
 
 const images = [
   {
     id: 1,
-    src: "/pexels-andreahinojosa-16358751.webp",
-    alt: "Embarcación en Baja California",
-    caption: "Nuestras Embarcaciones"
+    src: "/gallery-1.webp",
+    alt: "Aventura en el Pacífico",
+    caption: "Aventura en el Pacífico"
   },
   {
     id: 2,
-    src: "/pexels-fukajaz-9762762.webp",
-    alt: "Avistamiento de ballenas grises",
-    caption: "Encuentros Majestuosos"
+    src: "/gallery-2.webp",
+    alt: "Nuestra Flota",
+    caption: "Nuestra Flota"
   },
   {
     id: 3,
-    src: "/pexels-irrabagon-35380337.webp",
-    alt: "Buceo y Pesca con Arpón",
-    caption: "Pesca Submarina"
+    src: "/gallery-3.webp",
+    alt: "Exploración Marina",
+    caption: "Exploración Marina"
   },
   {
     id: 4,
-    src: "/pexels-irrabagon-35380338.webp",
-    alt: "Vida Marina en el Mar de Cortés",
+    src: "/gallery-4.webp",
+    alt: "Safari Marino",
     caption: "Safari Marino"
   },
   {
     id: 5,
-    src: "/pexels-moonpiczar-1759863.webp",
-    alt: "Pesca Deportiva",
-    caption: "Pesca Deportiva"
+    src: "/gallery-5.webp",
+    alt: "Encuentros Majestuosos",
+    caption: "Encuentros Majestuosos"
   },
   {
     id: 6,
-    src: "/pexels-nicomarinb-28404793.webp",
-    alt: "Atardecer en Puerto Chale",
-    caption: "Atardeceres Inolvidables"
-  },
-  {
-    id: 7,
-    src: "/pexels-roodzn-37590228.webp",
-    alt: "Paisaje costero Baja",
+    src: "/gallery-6.webp",
+    alt: "Puerto Chale",
     caption: "Puerto Chale"
   },
   {
+    id: 7,
+    src: "/gallery-7.webp",
+    alt: "Paisaje Costero",
+    caption: "Paisaje Costero"
+  },
+  {
     id: 8,
-    src: "/pexels-silvialus-31011163.webp",
-    alt: "Naturaleza y mar de Cortés",
-    caption: "Exploración Marina"
+    src: "/gallery-8.webp",
+    alt: "Vida Marina",
+    caption: "Vida Marina"
   },
   {
     id: 9,
-    src: "/pexels-timon-cornelissen-241844481-12801528.webp",
-    alt: "Mar y barcos",
-    caption: "Flota de Aventura"
-  },
-  {
-    id: 10,
-    src: "/pexels-vero-andrade-10716903-7799763.webp",
-    alt: "Navegación al atardecer",
+    src: "/gallery-9.webp",
+    alt: "Puesta de Sol",
     caption: "Puesta de Sol"
   }
 ];
@@ -73,11 +68,12 @@ export default function Gallery() {
         <div className={styles.grid}>
           {images.map((img, index) => (
             <div key={img.id} className={`${styles.imageWrapper} ${styles[`item${index + 1}`]}`}>
-              <img
+              <Image
                 src={img.src}
                 alt={img.alt}
+                fill
                 className={styles.image}
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
               <div className={styles.overlay}>
                 <span className={styles.caption}>{img.caption}</span>

@@ -30,8 +30,8 @@ export default function Navbar() {
           <Image 
             src="/logopirata.webp" 
             alt="Piratas Adventures" 
-            width={160} 
-            height={60} 
+            width={220} 
+            height={82} 
             className={styles.logoImage} 
             priority
           />
@@ -48,9 +48,15 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
-          <Link href="#contact" className={styles.ctaButton} onClick={() => setIsMobileMenuOpen(false)}>
-            RESERVA AHORA
-          </Link>
+          <a 
+            href="https://wa.me/526121234567" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className={styles.ctaButton} 
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            RESERVAR
+          </a>
         </div>
 
         <button 
