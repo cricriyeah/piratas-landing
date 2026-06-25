@@ -6,7 +6,7 @@ export default function About() {
       <div className={styles.container}>
         <div className={styles.left} data-aos="fade-right">
           <blockquote className={styles.quote}>
-            "Nuestra pasión es compartir la belleza cruda y auténtica del Océano Pacífico y Bahía Magdalena."
+            "Nuestra pasión es compartir la belleza cruda y auténtica del Océano Pacífico y Puerto Chale."
           </blockquote>
           <div className={styles.goldLine}></div>
         </div>

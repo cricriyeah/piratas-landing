@@ -12,7 +12,7 @@ const primaryServices = [
     icon: <Anchor size={36} strokeWidth={1.5} />,
     image: '/safarimarino.webp',
     description: 'Explora la asombrosa biodiversidad de Baja California Sur en su estado más salvaje.',
-    badge: 'Temporada: Jun — Oct',
+    badge: 'Temporada: Oct - Dic',
     animals: ['Marlin', 'Delfines', 'Dorados', 'Ballena Jorobada', 'Lobo Marino'],
     whatsappMsg: 'Hola! Me interesa reservar un Safari Marino.',
   },
@@ -90,14 +90,15 @@ export default function Services() {
 
         {/* Secondary Service — whale watching horizontal card */}
         <div className={styles.secondaryRow} data-aos="fade-up" data-aos-delay="300">
-          <div className={styles.secondaryCard}>
-            <div className={styles.secondaryImage}>
-              <Image src={secondaryService.image} alt={secondaryService.nameEs} fill className={styles.cardBgImage} sizes="(max-width: 900px) 100vw, 400px" />
+          <div className={styles.primaryCard} style={{ height: '460px' }}>
+            <div className={styles.cardBg}>
+              <Image src={secondaryService.image} alt={secondaryService.nameEs} fill className={styles.cardBgImage} sizes="100vw" />
             </div>
-            <div className={styles.secondaryContent}>
-              <span className={styles.secondaryBadge}>{secondaryService.badge}</span>
-              <h3 className={styles.secondaryTitle}>{secondaryService.nameEs}</h3>
-              <p className={styles.secondaryDesc}>{secondaryService.description}</p>
+            <div className={styles.cardOverlay} />
+            <div className={styles.cardBody}>
+              <span className={styles.badge} style={{ marginBottom: '0.8rem' }}>{secondaryService.badge}</span>
+              <h3 className={styles.cardTitle}>{secondaryService.nameEs}</h3>
+              <p className={styles.cardDesc} style={{ maxWidth: '600px' }}>{secondaryService.description}</p>
               <a
                 href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(secondaryService.whatsappMsg)}`}
                 target="_blank"

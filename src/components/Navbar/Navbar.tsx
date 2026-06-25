@@ -64,9 +64,9 @@ export default function Navbar() {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
-          <span className={`${styles.hamburgerLine} ${isMobileMenuOpen ? styles.lineTop : ''} ${isScrolled ? styles.darkLine : ''}`}></span>
-          <span className={`${styles.hamburgerLine} ${isMobileMenuOpen ? styles.lineMiddle : ''} ${isScrolled ? styles.darkLine : ''}`}></span>
-          <span className={`${styles.hamburgerLine} ${isMobileMenuOpen ? styles.lineBottom : ''} ${isScrolled ? styles.darkLine : ''}`}></span>
+          <span className={`${styles.hamburgerLine} ${isMobileMenuOpen ? styles.lineTop : ''}`}></span>
+          <span className={`${styles.hamburgerLine} ${isMobileMenuOpen ? styles.lineMiddle : ''}`}></span>
+          <span className={`${styles.hamburgerLine} ${isMobileMenuOpen ? styles.lineBottom : ''}`}></span>
         </button>
       </div>
     </nav>

@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className={`${ebGaramond.variable} ${hankenGrotesk.variable}`}>
+    <html lang="es" className={`${ebGaramond.variable} ${hankenGrotesk.variable}`} suppressHydrationWarning>
       <body suppressHydrationWarning>
         {children}
       </body>

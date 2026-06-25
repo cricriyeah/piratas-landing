@@ -20,7 +20,7 @@ export default function Hero() {
           Safari Marino<br /> <span className={styles.highlight}>&amp; Avistamiento de Ballenas</span>
         </h1>
         <p className={styles.subtitle} data-aos="fade-up" data-aos-delay="400">
-          Las mejores expediciones de Bahía Almejas y Bahía Magdalena. Comunícate por WhatsApp y reserva tu aventura en Puerto Chale, Baja California Sur.
+          Las mejores expediciones de Bahía Almejas y Puerto Chale. Comunícate por WhatsApp y reserva tu aventura en Puerto Chale, Baja California Sur.
         </p>
         <div className={styles.actions} data-aos="fade-up" data-aos-delay="600">
           <a href="https://wa.me/526121234567" target="_blank" rel="noopener noreferrer" className={styles.primaryBtn}>
