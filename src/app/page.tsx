@@ -12,6 +12,8 @@ import Gallery from '../components/Gallery/Gallery';
 import WhyUs from '../components/WhyUs/WhyUs';
 import Contact from '../components/Contact/Contact';
 import Footer from '../components/Footer/Footer';
+import LangToggle from '../components/LangToggle/LangToggle';
+import WhatsAppFab from '../components/WhatsAppFab/WhatsAppFab';
 
 export default function Home() {
   useEffect(() => {
@@ -38,6 +40,8 @@ export default function Home() {
       <WhyUs />
       <Contact />
       <Footer />
+      <WhatsAppFab />
+      <LangToggle />
     </main>
   );
 }

@@ -99,6 +99,43 @@
   transform: translateY(-2px);
 }
 
+/* Language Toggle */
+.langToggle {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  background: none;
+  border: 1px solid rgba(197, 160, 89, 0.4);
+  border-radius: 4px;
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+  transition: border-color var(--transition-base), background-color var(--transition-base);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+}
+
+.langToggle:hover {
+  border-color: var(--color-gold);
+  background-color: rgba(197, 160, 89, 0.1);
+}
+
+.langActive {
+  color: var(--color-gold);
+  font-weight: 700;
+}
+
+.langInactive {
+  color: rgba(197, 160, 89, 0.45);
+  font-weight: 400;
+}
+
+.langSeparator {
+  color: rgba(197, 160, 89, 0.4);
+  margin: 0 0.1rem;
+}
+
+
 .hamburger {
   display: none;
   flex-direction: column;

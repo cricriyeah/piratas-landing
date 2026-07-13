@@ -2,11 +2,14 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useLanguage } from '../../context/LanguageContext';
 import styles from './Navbar.module.css';
+
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,10 +20,10 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: 'Nosotros', href: '#about' },
-    { name: 'Servicios', href: '#services' },
-    { name: 'Galería', href: '#gallery' },
-    { name: 'Contacto', href: '#contact' },
+    { name: t.nav.about, href: '#about' },
+    { name: t.nav.services, href: '#services' },
+    { name: t.nav.gallery, href: '#gallery' },
+    { name: t.nav.contact, href: '#contact' },
   ];
 
   return (
@@ -48,6 +51,8 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
+
+
           <a 
             href="https://wa.me/526121234567" 
             target="_blank" 
@@ -55,7 +60,7 @@ export default function Navbar() {
             className={styles.ctaButton} 
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            RESERVAR
+            {t.nav.reserve}
           </a>
         </div>
 

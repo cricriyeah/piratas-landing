@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { EB_Garamond, Hanken_Grotesk } from 'next/font/google';
 import './globals.css';
+import { LanguageProvider } from '../context/LanguageContext';
 
 const ebGaramond = EB_Garamond({
   weight: ['600', '700', '800'],
@@ -29,7 +30,9 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${ebGaramond.variable} ${hankenGrotesk.variable}`} suppressHydrationWarning>
       <body suppressHydrationWarning>
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

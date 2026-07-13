@@ -1,41 +1,29 @@
+'use client';
 import { Compass, Anchor, Map } from 'lucide-react';
+import { useLanguage } from '../../context/LanguageContext';
 import styles from './WhyUs.module.css';
 
-const stats = [
-  {
-    value: "15+",
-    label: "Años de experiencia",
-    description: "Navegando las aguas de Baja Sur"
-  },
-  {
-    icon: <Compass className={styles.icon} strokeWidth={1.5} />,
-    label: "Guías Expertos",
-    description: "Conocimiento local profundo"
-  },
-  {
-    icon: <Anchor className={styles.icon} strokeWidth={1.5} />,
-    label: "Embarcaciones",
-    description: "Certificadas y seguras"
-  },
-  {
-    icon: <Map className={styles.icon} strokeWidth={1.5} />,
-    label: "Aventuras",
-    description: "Experiencias inolvidables"
-  }
+const icons = [
+  null,
+  <Compass key="compass" className={styles.icon} strokeWidth={1.5} />,
+  <Anchor key="anchor" className={styles.icon} strokeWidth={1.5} />,
+  <Map key="map" className={styles.icon} strokeWidth={1.5} />,
 ];
 
 export default function WhyUs() {
+  const { t } = useLanguage();
+
   return (
     <section className={styles.whyUs} data-aos="fade-up">
       <div className={styles.container}>
         <div className={styles.grid}>
-          {stats.map((stat, idx) => (
+          {t.whyUs.stats.map((stat, idx) => (
             <div key={idx} className={styles.item} data-aos="zoom-in" data-aos-delay={idx * 150}>
               <div className={styles.visual}>
-                {stat.value ? (
-                  <span className={styles.value}>{stat.value}</span>
+                {idx === 0 ? (
+                  <span className={styles.value}>15+</span>
                 ) : (
-                  stat.icon
+                  icons[idx]
                 )}
               </div>
               <h3 className={styles.label}>{stat.label}</h3>

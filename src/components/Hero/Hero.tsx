@@ -1,6 +1,10 @@
+'use client';
+import { useLanguage } from '../../context/LanguageContext';
 import styles from './Hero.module.css';
 
 export default function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section className={styles.hero}>
       <div className={styles.background}>
@@ -17,17 +21,17 @@ export default function Hero() {
 
       <div className={styles.content}>
         <h1 className={styles.title} data-aos="fade-up" data-aos-delay="200">
-          Safari Marino<br /> <span className={styles.highlight}>&amp; Avistamiento de Ballenas</span>
+          {t.hero.title1}<br /> <span className={styles.highlight}>{t.hero.title2}</span>
         </h1>
         <p className={styles.subtitle} data-aos="fade-up" data-aos-delay="400">
-          Las mejores expediciones de Bahía Almejas y Puerto Chale. Comunícate por WhatsApp y reserva tu aventura en Puerto Chale, Baja California Sur.
+          {t.hero.subtitle}
         </p>
         <div className={styles.actions} data-aos="fade-up" data-aos-delay="600">
           <a href="https://wa.me/526121234567" target="_blank" rel="noopener noreferrer" className={styles.primaryBtn}>
-            Reserva por WhatsApp
+            {t.hero.ctaPrimary}
           </a>
           <a href="#gallery" className={styles.secondaryBtn}>
-            Ver Galería
+            {t.hero.ctaSecondary}
           </a>
         </div>
       </div>
